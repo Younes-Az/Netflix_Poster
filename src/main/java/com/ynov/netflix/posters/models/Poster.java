@@ -13,14 +13,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 
-@Document(collection = "poster")
+@Document(collection = "posters")
 public class Poster implements Serializable{
-    private String idPoster;
+    private String id;
     private String idContent;
-  //  @JsonFormat(pattern = "yyyy-MM-dd", shape = Shape.STRING)
-  //  @Column(name = "time")
     private String urlMorning;
-    private String urlNight;
+    private String urlEvening;
     
     
     
@@ -34,11 +32,11 @@ public class Poster implements Serializable{
 
     }
 
-    public Poster (String idPoster, String idContent,String urlMorning, String urlNight) {
-        this.idPoster = idPoster;
+    public Poster (String id, String idContent,String urlMorning, String urlEvening) {
+        this.id = id;
         this.idContent = idContent;
         this.urlMorning = urlMorning;
-        this.urlNight = urlNight;
+        this.urlEvening = urlEvening;
     }
     
 
@@ -49,11 +47,11 @@ public class Poster implements Serializable{
 //        this.doctor = (String) map.get("doctor");
 //      }
     
-    public String getIdPoster() {
-        return idPoster;
+    public String getId() {
+        return id;
     }
-    public void setIdPoster(String idPoster) {
-        this.idPoster = idPoster;
+    public void setId(String id) {
+        this.id = id;
     }
     public String getIdContent() {
         return idContent;
@@ -68,11 +66,11 @@ public class Poster implements Serializable{
         this.urlMorning = urlMorning;
     }
     
-    public String getUrlNight() {
-        return urlNight;
+    public String getUrlEvening() {
+        return urlEvening;
     }
-    public void setUrlNight(String urlNight) {
-        this.urlNight = urlNight;
+    public void setUrlEvening(String urlEvening) {
+        this.urlEvening = urlEvening;
     }
 
 	

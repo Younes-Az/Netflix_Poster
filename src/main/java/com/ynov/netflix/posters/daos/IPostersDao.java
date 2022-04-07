@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import com.ynov.netflix.posters.models.Poster;
 
 @Repository
-public interface IPosterDao extends MongoRepository<Poster, String> {
+public interface IPostersDao extends MongoRepository<Poster, String> {
 
-    Poster findByName(String idContent);
+    Poster findByIdContent(String idContent);
     
 }
