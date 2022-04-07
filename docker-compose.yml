@@ -3,7 +3,7 @@ version: '3'
 services:
   poster_netflix:
     container_name: posters
-    image: poster-docker-0.0.1-snapshot
+    image: posters-docker-0.0.1-snapshot
     build:
       context: ./
       dockerfile: Dockerfile
