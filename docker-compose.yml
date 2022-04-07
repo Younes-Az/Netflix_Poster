@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  patients-microservice:
-    container_name: patients
-    image: patients-docker-0.0.1-snapshot
+  poster_netflix:
+    container_name: posters
+    image: poster-docker-0.0.1-snapshot
     build:
       context: ./
       dockerfile: Dockerfile
