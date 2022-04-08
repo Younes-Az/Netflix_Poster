@@ -19,14 +19,6 @@ public class Poster implements Serializable{
     private String idContent;
     private String urlMorning;
     private String urlEvening;
-    
-    
-    
-
-   
-	public void setIdContent(String idContent) {
-		this.idContent = idContent;
-	}
 
 	public Poster () {
 
@@ -56,7 +48,7 @@ public class Poster implements Serializable{
     public String getIdContent() {
         return idContent;
     }
-    public void setName(String idContent) {
+    public void setIdContent(String idContent) {
         this.idContent = idContent;
     }
     public String getUrlMorning() {
