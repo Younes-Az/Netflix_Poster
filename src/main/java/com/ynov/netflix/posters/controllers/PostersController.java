@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -59,5 +60,12 @@ public class PostersController {
     public Poster addPoster(@PathVariable String idPoster, @RequestBody Poster poster) {
         Poster posterUpdated = posterDao.save(poster);
         return posterUpdated;
+    }
+
+    @DeleteMapping("/posters/{idPoster}")
+    public boolean deletePoster(@PathVariable String idPoster) {
+        posterDao.deleteById(idPoster);
+        Optional<Poster> poster = posterDao.findById(idPoster);
+        return poster.isEmpty();
     }
 }
